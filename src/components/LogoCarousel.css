@@ -1,0 +1,118 @@
+.logo-carousel-section {
+  padding: 2rem 0;
+  background-color: #000000;
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+}
+
+.logo-carousel-section::before,
+.logo-carousel-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  background: linear-gradient(to right, #000000, transparent);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.logo-carousel-section::before {
+  left: 0;
+}
+
+.logo-carousel-section::after {
+  right: 0;
+  background: linear-gradient(to left, #000000, transparent);
+}
+
+.logo-carousel-container {
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.logo-carousel-track {
+  display: flex;
+  gap: 4rem;
+  animation: scroll 30s linear infinite;
+  width: fit-content;
+}
+
+.logo-carousel-item {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+  height: 100px;
+}
+
+.carousel-logo-image {
+  max-height: 80px;
+  max-width: 150px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.logo-carousel-item:hover .carousel-logo-image {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-carousel-section {
+    padding: 2rem 0;
+  }
+
+  .logo-carousel-item {
+    height: 70px;
+    padding: 0 1.5rem;
+  }
+
+  .carousel-logo-image {
+    max-height: 60px;
+    max-width: 120px;
+  }
+
+  .logo-carousel-track {
+    gap: 3rem;
+    animation-duration: 25s;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-carousel-section {
+    padding: 1.5rem 0;
+  }
+
+  .logo-carousel-item {
+    height: 60px;
+    padding: 0 1rem;
+  }
+
+  .carousel-logo-image {
+    max-height: 50px;
+    max-width: 100px;
+  }
+
+  .logo-carousel-track {
+    gap: 2rem;
+    animation-duration: 20s;
+  }
+}
+
