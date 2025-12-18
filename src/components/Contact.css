@@ -132,6 +132,8 @@
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(99, 16, 21, 0.3);
   margin-top: 1rem;
+  min-height: 48px;
+  touch-action: manipulation;
 }
 
 .submit-btn:hover {
@@ -294,7 +296,11 @@
   }
 
   .contact-content {
-    gap: 3rem;
+    gap: 2.5rem;
+  }
+
+  .contact-info-section {
+    position: static;
   }
 
   .contact-form {

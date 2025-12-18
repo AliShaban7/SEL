@@ -1,0 +1,102 @@
+.circular-badge-container {
+  position: absolute;
+  bottom: 175px; /* Moved down 10px more from 185px */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+}
+
+.circular-badge {
+  position: relative;
+  width: 160px;
+  height: 160px; /* Restored to full height */
+  display: flex;
+  align-items: center; /* Centered */
+  justify-content: center;
+  background-color: #000000;
+  border-radius: 50%; /* Full circle */
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.rotating-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: rotateCircle 15s linear infinite;
+}
+
+.rotating-text svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.rotating-text text {
+  fill: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.central-circle {
+  width: 75px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.central-logo {
+  width: 100%; /* Fill the container since we removed the inner circle */
+  height: auto;
+  object-fit: contain;
+  filter: none; /* Show original logo colors */
+}
+
+@keyframes rotateCircle {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+  .circular-badge-container {
+    bottom: 110px;
+  }
+  .circular-badge {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+  }
+  .central-circle {
+    width: 60px;
+    height: 60px;
+  }
+  .rotating-text text {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .circular-badge-container {
+    bottom: 80px;
+  }
+  .circular-badge {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+  }
+  .central-circle {
+    width: 50px;
+    height: 50px;
+  }
+  .rotating-text text {
+    font-size: 9px;
+  }
+}
+

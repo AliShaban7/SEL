@@ -15,12 +15,13 @@ const Footer = () => {
           <div className="footer-left">
             <div className="footer-section">
               <h3 className="footer-section-title">Faydalı Bağlantılar</h3>
-              <nav className="footer-links">
-                <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>Ana Sayfa</a>
-                <a href="#urunler" onClick={(e) => { e.preventDefault(); scrollToSection('urunler'); }}>Ürünler</a>
-                <a href="#galeri" onClick={(e) => { e.preventDefault(); scrollToSection('galeri'); }}>Galerimiz</a>
-                <a href="#iletisim" onClick={(e) => { e.preventDefault(); scrollToSection('iletisim'); }}>İletişim</a>
-              </nav>
+                     <nav className="footer-links">
+                       <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>Ana Sayfa</a>
+                       <a href="#hakkimizda" onClick={(e) => { e.preventDefault(); scrollToSection('hakkimizda'); }}>Hakkımızda</a>
+                       <a href="#urunler" onClick={(e) => { e.preventDefault(); scrollToSection('urunler'); }}>Ürünler</a>
+                       <a href="#galeri" onClick={(e) => { e.preventDefault(); scrollToSection('galeri'); }}>Galerimiz</a>
+                       <a href="#iletisim" onClick={(e) => { e.preventDefault(); scrollToSection('iletisim'); }}>İletişim</a>
+                     </nav>
             </div>
           </div>
           

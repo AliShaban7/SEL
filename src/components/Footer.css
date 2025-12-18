@@ -344,6 +344,10 @@
     padding: 3rem 1rem 1.5rem;
   }
 
+  .footer-main-content {
+    gap: 2rem;
+  }
+
   .footer-logo-image {
     max-width: 180px;
   }

@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background-color: #1f2324;
+  background-color: #000000; /* Changed from #1f2324 to black */
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -13,7 +13,7 @@
   top: 0;
   left: 0;
   right: 0;
-  height: calc(100% - 150px);
+  height: calc(100% - 250px); /* Increased to 250px to fit both badge and carousel */
   background-image: url('/gallery/Main.jpg');
   background-size: cover;
   background-position: center;
@@ -25,7 +25,7 @@
   top: 0;
   left: 0;
   right: 0;
-  height: calc(100% - 150px);
+  height: calc(100% - 250px); /* Match background height */
   background: linear-gradient(
     135deg,
     rgba(0, 0, 0, 0.5) 0%,
@@ -40,7 +40,7 @@
   top: 0;
   left: 0;
   right: 0;
-  height: calc(100% - 150px);
+  height: calc(100% - 250px); /* Match background height */
   z-index: 1;
   pointer-events: none;
   overflow: hidden;
@@ -127,55 +127,37 @@
                0 0 20px rgba(193, 163, 114, 0.4);
 }
 
-.hero-text {
-  background: rgba(0, 0, 0, 0.75);
-  padding: 3.5rem 3rem;
-  border-radius: 16px;
-  border: 3px solid #c1a372;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.6), 
-              0 0 0 1px rgba(193, 163, 114, 0.3) inset,
-              0 0 40px rgba(193, 163, 114, 0.2);
-  max-width: 900px;
+.hero-text-content {
+  text-align: center;
+  max-width: 1000px;
   width: 100%;
   margin: 0 auto;
   animation: fadeInUp 1s ease-out 0.4s both;
-  position: relative;
-  text-align: center;
 }
 
-.hero-text::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100px;
-  height: 3px;
-  background: linear-gradient(90deg, transparent, #c1a372, transparent);
-  border-radius: 0 0 3px 3px;
-}
-
-.hero-description-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  animation: fadeInUp 1s ease-out 0.6s both;
-  margin-bottom: 2rem;
-}
-
-.hero-description {
-  font-size: 1.3rem;
-  line-height: 2;
+.hero-subtitle {
+  font-size: 1.2rem;
+  font-weight: 500;
   color: #fbf4ea;
-  margin: 0;
-  font-weight: 300;
-  letter-spacing: 0.5px;
+  margin: 0 0 1rem 0;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  opacity: 0.9;
+  animation: fadeInUp 1s ease-out 0.6s both;
 }
 
-.hero-description strong {
-  color: #c1a372;
-  font-weight: 600;
+.hero-title-text {
+  font-family: 'Cormorant Infant', serif; /* Cormorant is a serif font */
+  font-size: 3.5rem;
+  font-weight: 400; /* Removed boldness */
+  color: #fff;
+  margin: 0 0 2.5rem 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5),
+               0 0 30px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 1s ease-out 0.8s both;
 }
 
 .hero-description-secondary {
@@ -216,6 +198,8 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  min-height: 48px;
+  touch-action: manipulation;
 }
 
 .hero-button:hover {
@@ -329,7 +313,7 @@
 
   .hero-background,
   .hero-overlay {
-    height: calc(100% - 120px);
+    height: calc(100% - 180px);
   }
 
   .hero-content {
@@ -345,24 +329,16 @@
     font-size: 0.8rem;
   }
 
-  .hero-text {
-    padding: 2.5rem 2rem;
-    border-radius: 15px;
-  }
-
-
-  .hero-description-wrapper {
-    gap: 1.25rem;
-  }
-
-  .hero-description {
-    font-size: 1.05rem;
-    line-height: 1.7;
-  }
-
-  .hero-description-secondary {
+  .hero-subtitle {
     font-size: 1rem;
-    line-height: 1.7;
+    letter-spacing: 2px;
+    margin-bottom: 0.875rem;
+  }
+
+  .hero-title-text {
+    font-size: 2.5rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 2rem;
   }
 
   .circle-1 {
@@ -393,7 +369,7 @@
 
   .hero-background,
   .hero-overlay {
-    height: calc(100% - 100px);
+    height: calc(100% - 150px);
   }
 
   .hero-content {
@@ -410,23 +386,17 @@
     letter-spacing: 1.5px;
   }
 
-  .hero-text {
-    padding: 2.5rem 1.5rem;
-    border-radius: 12px;
-  }
-
-  .hero-description-wrapper {
-    gap: 1rem;
-  }
-
-  .hero-description {
-    font-size: 0.95rem;
-    line-height: 1.6;
-  }
-
-  .hero-description-secondary {
+  .hero-subtitle {
     font-size: 0.9rem;
-    line-height: 1.6;
+    letter-spacing: 2px;
+    margin-bottom: 0.75rem;
+  }
+
+  .hero-title-text {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+    line-height: 1.3;
   }
 
   .hero-button {

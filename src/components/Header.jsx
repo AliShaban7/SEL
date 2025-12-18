@@ -22,11 +22,12 @@ const Header = () => {
 
   return (
     <header className={`header ${isSticky ? 'sticky' : ''}`}>
-      <div className="header-container">
-        <nav className="nav-menu">
-          <a href="#urunler" onClick={(e) => { e.preventDefault(); scrollToSection('urunler'); }}>ÜRÜNLER</a>
-          <a href="#galeri" onClick={(e) => { e.preventDefault(); scrollToSection('galeri'); }}>GALERİMİZ</a>
-        </nav>
+             <div className="header-container">
+               <nav className="nav-menu">
+                 <a href="#hakkimizda" onClick={(e) => { e.preventDefault(); scrollToSection('hakkimizda'); }}>HAKKIMIZDA</a>
+                 <a href="#urunler" onClick={(e) => { e.preventDefault(); scrollToSection('urunler'); }}>ÜRÜNLER</a>
+                 <a href="#galeri" onClick={(e) => { e.preventDefault(); scrollToSection('galeri'); }}>GALERİMİZ</a>
+               </nav>
         <div className="logo-container">
           <img src="/gallery/SEL LOGO.png" alt="SEL İÇECEK" className="header-logo-image" />
         </div>

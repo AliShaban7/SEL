@@ -4,6 +4,11 @@ import './Products.css';
 const Products = () => {
   const [activeFilter, setActiveFilter] = useState('all');
 
+  // Helper function to get image URL - handles Turkish characters
+  const getImageUrl = (filename) => {
+    return `/gallery/${filename}`;
+  };
+
   const products = [
     {
       id: 1,
@@ -29,7 +34,7 @@ const Products = () => {
       brand: 'Mildiani',
       productName: 'Alaznis Veli',
       category: 'wine',
-      image: '/gallery/mildiani-alaznis-veli.jpg',
+      image: getImageUrl('ALAZNİS-VELİ.png'),
       description: 'Premium Gürcü şarabı',
       alcohol: '12-13% vol',
       highlights: ['Geleneksel üretim', 'Premium kalite']
@@ -40,7 +45,7 @@ const Products = () => {
       brand: 'Mildiani',
       productName: 'Rkatsiteli',
       category: 'wine',
-      image: '/gallery/mildiani-rkatsiteli.jpg',
+      image: getImageUrl('RKATSİTELİ.png'),
       description: 'Klasik beyaz şarap',
       alcohol: '12-13% vol',
       highlights: ['Gürcü üzüm çeşidi', 'Özel fermantasyon']
@@ -51,7 +56,7 @@ const Products = () => {
       brand: 'Mildiani',
       productName: 'Mukuzani',
       category: 'wine',
-      image: '/gallery/mildiani-mukuzani.jpg',
+      image: getImageUrl('MUKUZANİ.png'),
       description: 'Kırmızı şarap',
       alcohol: '12-13% vol',
       highlights: ['Saperavi üzümü', 'Zengin aroma']
@@ -62,7 +67,7 @@ const Products = () => {
       brand: 'Mildiani',
       productName: 'Pirosmani',
       category: 'wine',
-      image: '/gallery/mildiani-pirosmani.jpg',
+      image: getImageUrl('PİROSMANİ.png'),
       description: 'Özel karışım şarap',
       alcohol: '12-13% vol',
       highlights: ['Sanatçı adına', 'Sınırlı üretim']
@@ -106,7 +111,17 @@ const Products = () => {
                   alt={product.name}
                   className="product-image"
                   onError={(e) => {
-                    e.target.src = '/placeholder-product.jpg';
+                    console.error('Image failed to load:', product.image);
+                    // Try with URL-encoded filename as fallback for Turkish characters
+                    const filename = product.image.split('/').pop();
+                    const encodedUrl = `/gallery/${encodeURIComponent(filename)}`;
+                    if (e.target.src !== encodedUrl) {
+                      console.log('Trying encoded URL:', encodedUrl);
+                      e.target.src = encodedUrl;
+                    } else {
+                      console.error('Both original and encoded URLs failed for:', product.name);
+                      e.target.style.display = 'none';
+                    }
                   }}
                 />
               </div>

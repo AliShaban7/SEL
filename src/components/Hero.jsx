@@ -1,5 +1,6 @@
 import './Hero.css';
 import LogoCarousel from './LogoCarousel';
+import CircularBadge from './CircularBadge';
 
 const Hero = () => {
   const scrollToSection = (id) => {
@@ -23,14 +24,9 @@ const Hero = () => {
         <div className="hero-badge">
           <span className="badge-text">Premium Distribütör</span>
         </div>
-        <div className="hero-text">
-          <div className="hero-description-wrapper">
-            <p className="hero-description">
-              Türkiye'de <strong>Saranskiy Distillery</strong>'nin resmi distribütörü olarak, 
-              titiz kalite kontrol ve özenle seçilmiş hammaddelerle üretilen 
-              ürünlerin güvenilir bir şekilde tüketiciye ulaşmasını garanti ediyoruz.
-            </p>
-          </div>
+        <div className="hero-text-content">
+          <p className="hero-subtitle">DOĞADAN BARDAĞINIZA</p>
+          <h1 className="hero-title-text">HER YUDUMDA DOĞANIN SAF LEZZETI</h1>
           <div className="hero-cta">
             <button 
               className="hero-button"
@@ -44,6 +40,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
+      <CircularBadge />
       <div className="hero-logo-carousel">
         <LogoCarousel />
       </div>

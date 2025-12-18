@@ -265,11 +265,21 @@
 
 @media (max-width: 480px) {
   .gallery {
-    padding: 0 1rem 3rem 1rem;
+    padding: 3rem 1rem 3rem 1rem;
+  }
+
+  .gallery-header {
+    margin-bottom: 2.5rem;
   }
 
   .gallery-title {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+  }
+
+  .gallery-title::after {
+    width: 60px;
+    height: 2px;
   }
 
   .carousel-nav {
