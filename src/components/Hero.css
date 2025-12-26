@@ -2,8 +2,10 @@
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background-color: #000000; /* Changed from #1f2324 to black */
-  display: flex;
+  background-color: #000000;
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
   flex-direction: column;
   overflow: hidden;
 }
@@ -13,7 +15,7 @@
   top: 0;
   left: 0;
   right: 0;
-  height: calc(100% - 250px); /* Increased to 250px to fit both badge and carousel */
+  height: calc(100% - 175px);
   background-image: url('/gallery/Main.jpg');
   background-size: cover;
   background-position: center;
@@ -25,7 +27,7 @@
   top: 0;
   left: 0;
   right: 0;
-  height: calc(100% - 250px); /* Match background height */
+  height: calc(100% - 175px);
   background: linear-gradient(
     135deg,
     rgba(0, 0, 0, 0.5) 0%,
@@ -40,7 +42,7 @@
   top: 0;
   left: 0;
   right: 0;
-  height: calc(100% - 250px); /* Match background height */
+  height: calc(100% - 175px);
   z-index: 1;
   pointer-events: none;
   overflow: hidden;
@@ -118,7 +120,7 @@
 }
 
 .badge-text {
-  font-size: 0.9rem;
+  font-size: 0.85rem; /* Reduced for 100% zoom */
   font-weight: 700;
   color: #c1a372;
   letter-spacing: 2px;
@@ -136,7 +138,7 @@
 }
 
 .hero-subtitle {
-  font-size: 1.2rem;
+  font-size: 1.1rem; /* Reduced for 100% zoom */
   font-weight: 500;
   color: #fbf4ea;
   margin: 0 0 1rem 0;
@@ -148,7 +150,7 @@
 
 .hero-title-text {
   font-family: 'Cormorant Infant', serif; /* Cormorant is a serif font */
-  font-size: 3.5rem;
+  font-size: 3.2rem; /* Reduced for 100% zoom */
   font-weight: 400; /* Removed boldness */
   color: #fff;
   margin: 0 0 2.5rem 0;
@@ -186,9 +188,9 @@
   background-color: #631015;
   color: #fff;
   border: none;
-  padding: 1rem 2.5rem;
+  padding: 0.9rem 2.2rem; /* Reduced from 1rem 2.5rem */
   border-radius: 5px;
-  font-size: 1.1rem;
+  font-size: 1rem; /* Reduced from 1.1rem */
   font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase;

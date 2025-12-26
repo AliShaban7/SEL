@@ -1,6 +1,6 @@
 .circular-badge-container {
   position: absolute;
-  bottom: 175px; /* Moved down 10px more from 185px */
+  bottom: 110px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
@@ -11,8 +11,8 @@
 
 .circular-badge {
   position: relative;
-  width: 160px;
-  height: 160px; /* Restored to full height */
+  width: 140px; /* Reduced for 100% zoom */
+  height: 140px; /* Reduced for 100% zoom */
   display: flex;
   align-items: center; /* Centered */
   justify-content: center;
@@ -36,15 +36,15 @@
 
 .rotating-text text {
   fill: #fff;
-  font-size: 14px;
+  font-size: 12px; /* Reduced from 14px */
   font-weight: 600;
   letter-spacing: 1.5px;
   text-transform: uppercase;
 }
 
 .central-circle {
-  width: 75px;
-  height: 75px;
+  width: 65px; /* Reduced from 75px */
+  height: 65px; /* Reduced from 75px */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,7 +66,7 @@
 
 @media (max-width: 768px) {
   .circular-badge-container {
-    bottom: 110px;
+    bottom: 78px;
   }
   .circular-badge {
     width: 130px;
@@ -84,7 +84,7 @@
 
 @media (max-width: 480px) {
   .circular-badge-container {
-    bottom: 80px;
+    bottom: 55px;
   }
   .circular-badge {
     width: 110px;

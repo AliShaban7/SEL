@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Products.css';
 
 const Products = () => {
@@ -12,21 +13,27 @@ const Products = () => {
   const products = [
     {
       id: 1,
-      name: 'Chisti Rosi',
+      name: 'Saranskiy Distillery Chistie Rosi',
+      brand: 'Saranskiy Distillery',
+      productName: 'Chistie Rosi',
       category: 'vodka',
       image: '/gallery/Chisti-Rosi-Packed.jpg',
       description: 'Organik vodka',
       alcohol: '40% vol',
-      highlights: ['Kosher Parve', 'Manuel kontrol', 'ISO 22000 sertifikalı']
+      highlights: ['Kosher Parve', 'Manuel kontrol'],
+      slug: 'chistie-rosi'
     },
     {
       id: 2,
-      name: 'Balchug XXI Yüzyıl',
+      name: 'Saranskiy Distillery Balchug XXI Yüzyıl',
+      brand: 'Saranskiy Distillery',
+      productName: 'Balchug XXI',
       category: 'vodka',
-      image: '/gallery/22-07.png',
+      image: '/gallery/Balchug-update.jpeg',
       description: 'Soft vodka',
       alcohol: '40% vol',
-      highlights: ['Forbes ödüllü', 'Spirits Masters ödüllü']
+      highlights: ['Forbes ödüllü', 'Spirits Masters ödüllü'],
+      slug: 'balchug-xxi'
     },
     {
       id: 3,
@@ -34,10 +41,11 @@ const Products = () => {
       brand: 'Mildiani',
       productName: 'Alaznis Veli',
       category: 'wine',
-      image: getImageUrl('ALAZNİS-VELİ.png'),
+      image: '/gallery/ALAZNS-VEL.png',
       description: 'Premium Gürcü şarabı',
       alcohol: '12-13% vol',
-      highlights: ['Geleneksel üretim', 'Premium kalite']
+      highlights: ['Geleneksel üretim', 'Premium kalite'],
+      slug: 'alaznis-veli'
     },
     {
       id: 4,
@@ -45,10 +53,11 @@ const Products = () => {
       brand: 'Mildiani',
       productName: 'Rkatsiteli',
       category: 'wine',
-      image: getImageUrl('RKATSİTELİ.png'),
+      image: '/gallery/rkatsiteli-white.png',
       description: 'Klasik beyaz şarap',
       alcohol: '12-13% vol',
-      highlights: ['Gürcü üzüm çeşidi', 'Özel fermantasyon']
+      highlights: ['Gürcü üzüm çeşidi', 'Özel fermantasyon'],
+      slug: 'rkatsiteli'
     },
     {
       id: 5,
@@ -56,10 +65,11 @@ const Products = () => {
       brand: 'Mildiani',
       productName: 'Mukuzani',
       category: 'wine',
-      image: getImageUrl('MUKUZANİ.png'),
+      image: '/gallery/mukuzan-red.png',
       description: 'Kırmızı şarap',
       alcohol: '12-13% vol',
-      highlights: ['Saperavi üzümü', 'Zengin aroma']
+      highlights: ['Saperavi üzümü', 'Zengin aroma'],
+      slug: 'mukuzani'
     },
     {
       id: 6,
@@ -67,10 +77,35 @@ const Products = () => {
       brand: 'Mildiani',
       productName: 'Pirosmani',
       category: 'wine',
-      image: getImageUrl('PİROSMANİ.png'),
+      image: '/gallery/prosman-white.png',
       description: 'Özel karışım şarap',
       alcohol: '12-13% vol',
-      highlights: ['Sanatçı adına', 'Sınırlı üretim']
+      highlights: ['Sanatçı adına', 'Sınırlı üretim'],
+      slug: 'pirosmani'
+    },
+    {
+      id: 7,
+      name: 'Mildiani Saperavi',
+      brand: 'Mildiani',
+      productName: 'Saperavi',
+      category: 'wine',
+      image: '/gallery/Saperavi-red.png',
+      description: 'Kakheti bölgesinden özel Saperavi',
+      alcohol: '13-14% vol',
+      highlights: ['Kuru', 'Yoğun kiraz rengi'],
+      slug: 'saperavi'
+    },
+    {
+      id: 8,
+      name: 'Mildiani Pirosmani Red',
+      brand: 'Mildiani',
+      productName: 'Pirosmani Red',
+      category: 'wine',
+      image: '/gallery/prosman.png',
+      description: 'Kakheti bölgesinden yarı-kuru Pirosmani',
+      alcohol: '12-13% vol',
+      highlights: ['Tatlı meyve aromaları', 'Yarı-kuru'],
+      slug: 'pirosmani-red'
     }
   ];
 
@@ -104,27 +139,19 @@ const Products = () => {
         </div>
         <div className="products-grid">
           {filteredProducts.map((product, index) => (
-            <div key={product.id} className="product-card" style={{ animationDelay: `${index * 0.1}s` }}>
-              <div className="product-image-container">
-                <img 
-                  src={product.image} 
-                  alt={product.name}
-                  className="product-image"
-                  onError={(e) => {
-                    console.error('Image failed to load:', product.image);
-                    // Try with URL-encoded filename as fallback for Turkish characters
-                    const filename = product.image.split('/').pop();
-                    const encodedUrl = `/gallery/${encodeURIComponent(filename)}`;
-                    if (e.target.src !== encodedUrl) {
-                      console.log('Trying encoded URL:', encodedUrl);
-                      e.target.src = encodedUrl;
-                    } else {
-                      console.error('Both original and encoded URLs failed for:', product.name);
+            <Link key={product.id} to={`/product/${product.slug}`} className="product-card-link" style={{ animationDelay: `${index * 0.1}s` }}>
+              <div className="product-card">
+                <div className="product-image-container">
+                  <img 
+                    src={product.image} 
+                    alt={product.name}
+                    className="product-image"
+                    onError={(e) => {
+                      console.error('Image failed to load:', product.image);
                       e.target.style.display = 'none';
-                    }
-                  }}
-                />
-              </div>
+                    }}
+                  />
+                </div>
               <div className="product-info">
                 {product.brand ? (
                   <div className="product-name-wrapper">
@@ -144,7 +171,8 @@ const Products = () => {
                   </div>
                 </div>
               </div>
-            </div>
+              </div>
+            </Link>
           ))}
         </div>
       </div>

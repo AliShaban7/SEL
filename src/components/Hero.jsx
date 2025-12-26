@@ -6,7 +6,7 @@ const Hero = () => {
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView();
     }
   };
 
@@ -49,4 +49,3 @@ const Hero = () => {
 };
 
 export default Hero;
-

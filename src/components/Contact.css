@@ -1,5 +1,5 @@
 .contact {
-  padding: 6rem 2rem;
+  padding: 4rem 2rem;
   background-color: #fbf4ea;
   min-height: 100vh;
   position: relative;
@@ -11,11 +11,11 @@
 }
 
 .section-title {
-  font-size: 3rem;
+  font-size: 2.7rem; /* Reduced for 100% zoom */
   font-weight: 700;
   color: #000;
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
   letter-spacing: 3px;
   text-transform: uppercase;
   position: relative;
@@ -35,14 +35,14 @@
 .contact-content {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  gap: 5rem;
+  gap: 4rem;
   align-items: start;
 }
 
 /* Contact Form Styles */
 .contact-form {
   background-color: #000;
-  padding: 3rem;
+  padding: 2.5rem;
   border-radius: 15px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2),
               0 0 0 1px rgba(193, 163, 114, 0.1);
@@ -56,7 +56,7 @@
 }
 
 .form-title {
-  font-size: 1.8rem;
+  font-size: 1.7rem; /* Reduced for 100% zoom */
   font-weight: 700;
   color: #c1a372;
   margin-bottom: 0.5rem;
@@ -67,12 +67,12 @@
 .form-subtitle {
   font-size: 1rem;
   color: rgba(251, 244, 234, 0.7);
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
   line-height: 1.6;
 }
 
 .form-group {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .form-group label {
@@ -119,12 +119,12 @@
 
 .submit-btn {
   width: 100%;
-  padding: 1.25rem 2rem;
+  padding: 1.1rem 1.8rem; /* Reduced for 100% zoom */
   background-color: #631015;
   color: #fff;
   border: none;
   border-radius: 8px;
-  font-size: 1.1rem;
+  font-size: 1rem; /* Reduced for 100% zoom */
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -150,13 +150,13 @@
 .contact-info-section {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 2rem;
   position: sticky;
   top: 100px;
 }
 
 .info-section-title {
-  font-size: 2rem;
+  font-size: 1.8rem; /* Reduced for 100% zoom */
   font-weight: 700;
   color: #000;
   margin-bottom: 0.5rem;
@@ -175,7 +175,7 @@
   display: flex;
   gap: 1.5rem;
   align-items: flex-start;
-  padding: 2rem;
+  padding: 1.5rem;
   background-color: #000;
   border-radius: 12px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
@@ -250,7 +250,7 @@
 .contact-details a {
   color: #fbf4ea;
   text-decoration: none;
-  font-size: 1.25rem;
+  font-size: 1.15rem; /* Reduced for 100% zoom */
   font-weight: 500;
   transition: all 0.3s ease;
   display: inline-block;
@@ -263,7 +263,7 @@
 
 .contact-details p {
   color: #fbf4ea;
-  font-size: 1.1rem;
+  font-size: 1rem; /* Reduced for 100% zoom */
   line-height: 1.8;
   margin: 0;
   white-space: nowrap;

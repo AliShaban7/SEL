@@ -37,7 +37,7 @@ const Gallery = () => {
     <section id="galeri" className="gallery">
       <div className="gallery-container">
         <div className="gallery-header">
-          <h2 className="gallery-title">Vodka üretim sürecimizden kareler</h2>
+          <h2 className="gallery-title">Üretim Sürecimizden Kareler</h2>
         </div>
         
         <div className="carousel-container">

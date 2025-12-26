@@ -1,7 +1,6 @@
 .gallery {
-  padding: 4rem 2rem 6rem 2rem;
+  padding: 3rem 2rem 4rem 2rem;
   background-color: #000;
-  min-height: 100vh;
 }
 
 .gallery-container {
@@ -10,12 +9,12 @@
 }
 
 .gallery-header {
-  margin-bottom: 4rem;
+  margin-bottom: 2.5rem;
   text-align: center;
 }
 
 .gallery-title {
-  font-size: 2.5rem;
+  font-size: 2.3rem; /* Reduced for 100% zoom */
   font-weight: 700;
   color: #c1a372;
   text-align: center;
@@ -42,7 +41,7 @@
 
 .carousel-container {
   position: relative;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -64,7 +63,7 @@
 .carousel-slide {
   min-width: 100%;
   position: relative;
-  aspect-ratio: 16/9;
+  aspect-ratio: 2.5/1;
   background-color: #1f2324;
   cursor: pointer;
   overflow: hidden;
@@ -215,7 +214,7 @@
 .lightbox-caption {
   color: #fbf4ea;
   margin-top: 1rem;
-  font-size: 1.1rem;
+  font-size: 1rem; /* Reduced for 100% zoom */
   text-align: center;
 }
 

@@ -62,7 +62,7 @@
 }
 
 .experience-number {
-  font-size: 2.5rem;
+  font-size: 2.2rem; /* Reduced for 100% zoom */
   font-weight: 700;
   line-height: 1;
   margin-bottom: 0.5rem;
@@ -104,7 +104,7 @@
 }
 
 .about-subtitle {
-  font-size: 2.5rem;
+  font-size: 2.3rem; /* Reduced for 100% zoom */
   color: #000;
   font-family: 'Cormorant Infant', serif;
   font-weight: 600;
@@ -113,7 +113,7 @@
 }
 
 .about-description {
-  font-size: 1.1rem;
+  font-size: 1.05rem; /* Reduced for 100% zoom */
   color: #1f2324;
   line-height: 1.8;
   margin: 0;
@@ -132,7 +132,7 @@
   gap: 1rem;
   font-weight: 600;
   color: #000;
-  font-size: 1.05rem;
+  font-size: 1rem; /* Reduced for 100% zoom */
 }
 
 .feature-icon {

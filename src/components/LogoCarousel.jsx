@@ -7,10 +7,11 @@ const LogoCarousel = () => {
     { id: 3, src: '/gallery/balchug-logo.png', alt: 'Balchug' },
     { id: 4, src: '/gallery/derevenka-logo.png', alt: 'Derevenka' },
     { id: 5, src: '/gallery/saranskiy-zavod.svg', alt: 'Saranskiy Zavod' },
+    { id: 6, src: '/gallery/Mildiani-logo.svg', alt: 'Mildiani' },
   ];
 
   // Duplicate logos for seamless loop
-  const duplicatedLogos = [...logos, ...logos];
+  const duplicatedLogos = [...logos, ...logos, ...logos, ...logos];
 
   return (
     <section className="logo-carousel-section">

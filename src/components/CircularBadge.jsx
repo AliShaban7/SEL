@@ -14,7 +14,7 @@ const CircularBadge = () => {
             />
             <text>
               <textPath href="#circlePath" startOffset="0%" textLength="472" lengthAdjust="spacing">
-               • {" "} SAFLIK • KALİTE • GÜVEN • GELENEK • SEL İÇECEK  •
+                • SAFLIK • KALİTE • GÜVEN • GELENEK • SEL İÇECEK • 
               </textPath>
             </text>
           </svg>
