@@ -371,21 +371,21 @@
 
   .hero-background,
   .hero-overlay {
-    height: calc(100% - 150px);
+    height: calc(100% - 60px);
   }
 
   .hero-content {
-    padding: 2rem 1rem;
+    padding: 2rem 1rem 3rem 1rem;
     gap: 1.25rem;
   }
 
   .hero-badge {
-    padding: 0.4rem 1.2rem;
+    padding: 0.3rem 1rem;
   }
 
   .badge-text {
-    font-size: 0.75rem;
-    letter-spacing: 1.5px;
+    font-size: 0.65rem;
+    letter-spacing: 1px;
   }
 
   .hero-subtitle {
@@ -402,13 +402,13 @@
   }
 
   .hero-button {
-    font-size: 0.95rem;
-    padding: 0.75rem 1.75rem;
-    gap: 0.5rem;
+    font-size: 0.85rem;
+    padding: 0.6rem 1.5rem;
+    gap: 0.4rem;
   }
 
   .hero-button .button-arrow {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
   }
 
   .circle-1,
@@ -419,6 +419,10 @@
   .line-1,
   .line-2 {
     display: none;
+  }
+
+  .hero-logo-carousel {
+    margin-top: 3rem !important;
   }
 }
 

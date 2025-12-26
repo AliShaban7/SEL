@@ -36,7 +36,7 @@
 .logo-carousel-track {
   display: flex;
   gap: 3rem; /* Reduced from 4rem */
-  animation: scroll 30s linear infinite;
+  animation: scroll 45s linear infinite;
   width: fit-content;
 }
 
@@ -90,7 +90,7 @@
 
   .logo-carousel-track {
     gap: 3rem;
-    animation-duration: 25s;
+    animation-duration: 35s;
   }
 }
 
@@ -111,7 +111,7 @@
 
   .logo-carousel-track {
     gap: 2rem;
-    animation-duration: 20s;
+    animation-duration: 30s;
   }
 }
 
