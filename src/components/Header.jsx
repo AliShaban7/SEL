@@ -1,9 +1,12 @@
 import { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
   const [isSticky, setIsSticky] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,11 +18,35 @@ const Header = () => {
   }, []);
 
   const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView();
-    }
     setIsMobileMenuOpen(false);
+    
+    // Check if we're on the homepage
+    if (location.pathname === '/') {
+      // We're on homepage, just scroll to section
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // We're on another page, navigate to homepage with hash
+      navigate('/#' + id);
+      // After navigation, scroll to section
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  };
+
+  const goToHome = () => {
+    setIsMobileMenuOpen(false);
+    if (location.pathname !== '/') {
+      navigate('/');
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   };
 
   const toggleMobileMenu = () => {
@@ -37,7 +64,7 @@ const Header = () => {
         </nav>
 
         {/* Logo - Center */}
-        <div className="logo-container">
+        <div className="logo-container" onClick={goToHome} style={{ cursor: 'pointer' }}>
           <img src="/gallery/SEL LOGO.png" alt="SEL İÇECEK" className="header-logo-image" />
         </div>
         
@@ -68,6 +95,7 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       <nav className={`mobile-nav ${isMobileMenuOpen ? 'open' : ''}`}>
+        <a href="/" onClick={(e) => { e.preventDefault(); goToHome(); }}>ANA SAYFA</a>
         <a href="#hakkimizda" onClick={(e) => { e.preventDefault(); scrollToSection('hakkimizda'); }}>HAKKIMIZDA</a>
         <a href="#urunler" onClick={(e) => { e.preventDefault(); scrollToSection('urunler'); }}>ÜRÜNLER</a>
         <a href="#galeri" onClick={(e) => { e.preventDefault(); scrollToSection('galeri'); }}>GALERİMİZ</a>

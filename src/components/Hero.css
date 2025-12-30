@@ -97,6 +97,7 @@
   z-index: 2;
   max-width: 1400px;
   padding: 4rem 2rem;
+  padding-top: 8rem;
   text-align: center;
   width: 100%;
   flex: 1;
@@ -320,6 +321,7 @@
 
   .hero-content {
     padding: 3rem 1.5rem;
+    padding-top: 6rem;
     gap: 1.5rem;
   }
 
@@ -376,6 +378,7 @@
 
   .hero-content {
     padding: 2rem 1rem 3rem 1rem;
+    padding-top: 5rem;
     gap: 1.25rem;
   }
 
@@ -402,13 +405,15 @@
   }
 
   .hero-button {
-    font-size: 0.85rem;
-    padding: 0.6rem 1.5rem;
-    gap: 0.4rem;
+    font-size: 0.7rem;
+    padding: 0.5rem 1rem;
+    gap: 0.3rem;
+    min-height: 38px;
+    letter-spacing: 1px;
   }
 
   .hero-button .button-arrow {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
   .circle-1,

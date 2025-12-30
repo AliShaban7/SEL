@@ -106,7 +106,7 @@ const Contact = () => {
               </div>
               <div className="contact-details">
                 <h3>Adres</h3>
-                <p>SULTANİYE MAH. 350. SK. ŞELALE PLAZA NO: 1/66 ESENYURT</p>
+                <p>Üniversite Mh. Civan Sk. No:1 Allure Tower Kat: 18 Ofis 256 Avcılar/İstanbul</p>
               </div>
             </div>
           </div>
