@@ -29,17 +29,19 @@ const Header = () => {
   return (
     <header className={`header ${isSticky ? 'sticky' : ''}`}>
       <div className="header-container">
-        <div className="logo-container">
-          <img src="/gallery/SEL LOGO.png" alt="SEL İÇECEK" className="header-logo-image" />
-        </div>
-        
-        {/* Desktop Navigation */}
+        {/* Desktop Navigation - Left */}
         <nav className="nav-menu desktop-nav">
           <a href="#hakkimizda" onClick={(e) => { e.preventDefault(); scrollToSection('hakkimizda'); }}>HAKKIMIZDA</a>
           <a href="#urunler" onClick={(e) => { e.preventDefault(); scrollToSection('urunler'); }}>ÜRÜNLER</a>
           <a href="#galeri" onClick={(e) => { e.preventDefault(); scrollToSection('galeri'); }}>GALERİMİZ</a>
         </nav>
+
+        {/* Logo - Center */}
+        <div className="logo-container">
+          <img src="/gallery/SEL LOGO.png" alt="SEL İÇECEK" className="header-logo-image" />
+        </div>
         
+        {/* Contact Button - Right */}
         <div className="contact-info">
           <button 
             className="contact-button"

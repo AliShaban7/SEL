@@ -119,11 +119,11 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 0;
-  }
+}
 
   .call-text {
     display: none;
-  }
+}
 
   .call-icon {
     width: 24px;

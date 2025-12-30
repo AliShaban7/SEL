@@ -1,8 +1,9 @@
 .contact {
   padding: 4rem 2rem;
   background-color: #fbf4ea;
-  min-height: 100vh;
+  min-height: auto;
   position: relative;
+  zoom: 0.9; /* Zoom out for compact view */
 }
 
 .contact-container {

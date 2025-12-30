@@ -169,17 +169,6 @@ const ProductDetail = () => {
                 </div>
               </div>
 
-              <div className="product-detail-highlights">
-                <h3>Öne Çıkanlar</h3>
-                <div className="highlights-list">
-                  {product.highlights.map((highlight, index) => (
-                    <div key={index} className="highlight-item">
-                      <span className="highlight-text">{highlight}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
               <div className="product-detail-features">
                 <h3>Özellikleri</h3>
                 <ul className="features-list">
