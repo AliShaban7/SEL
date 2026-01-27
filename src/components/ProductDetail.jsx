@@ -42,7 +42,7 @@ const ProductDetail = () => {
       description: 'Premium Gürcü şarabı',
       alcohol: '12-13% vol',
       highlights: ['Geleneksel üretim', 'Premium kalite'],
-      fullDescription: 'Kindzmarauli, Gürcistan\'ın en iyi üzüm bağlarından elde edilen üzümlerle üretilen premium bir beyaz şaraptır. Geleneksel üretim teknikleri ve modern teknolojinin birleşimiyle ortaya çıkmıştır.',
+      fullDescription: 'Kindzmarauli, Gürcistan\'ın en iyi üzüm bağlarından elde edilen üzümlerle üretilen premium bir yarı tatlı ve kırmızı şaraptır. Geleneksel üretim teknikleri ve modern teknolojinin birleşimiyle ortaya çıkmıştır.',
       features: ['Geleneksel üretim', 'Premium kalite', 'Gürcü üzümleri', 'Özel fermantasyon']
     },
     'rkatsiteli': {
