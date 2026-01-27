@@ -33,7 +33,7 @@ const Footer = () => {
           </nav>
           
           <div className="footer-contact">
-            <a href="tel:05456069264">0545 606 92 64</a>
+            <a href="tel:05394783931">0539 478 39 31</a>
             <span className="footer-divider-dot">•</span>
             <a href="mailto:info@selicecek.com.tr">info@selicecek.com.tr</a>
           </div>

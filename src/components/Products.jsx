@@ -20,7 +20,7 @@ const Products = () => {
       image: '/gallery/Chisti-Rosi-Packed.jpg',
       description: 'Organik vodka',
       alcohol: '40% vol',
-      highlights: ['Kosher Parve', 'Manuel kontrol'],
+      highlights: ['Ödüllü', 'Manuel kontrol'],
       slug: 'chistie-rosi'
     },
     {
