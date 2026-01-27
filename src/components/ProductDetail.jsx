@@ -33,16 +33,16 @@ const ProductDetail = () => {
       fullDescription: 'Balchug XXI, Forbes ve Spirits Masters ödüllü bir premium vodkadır. Yumuşak tadı ve pürüzsüz dokunuşuyla dünya çapında tanınan bu ürün, Saranskiy Distillery\'nin en başarılı ürünlerinden biridir.',
       features: ['Forbes ödüllü', 'Spirits Masters ödüllü', 'Yumuşak tat', 'Premium kalite']
     },
-    'alaznis-veli': {
-      name: 'Mildiani Alaznis Veli',
+    'Kindzmarauli': {
+      name: 'Mildiani Kindzmarauli',
       brand: 'Mildiani',
-      productName: 'Alaznis Veli',
+      productName: 'Kindzmarauli',
       category: 'wine',
-      image: '/gallery/ALAZNS-VEL.png',
+      image: '/gallery/kindzmarauilo.png',
       description: 'Premium Gürcü şarabı',
       alcohol: '12-13% vol',
       highlights: ['Geleneksel üretim', 'Premium kalite'],
-      fullDescription: 'Alaznis Veli, Gürcistan\'ın en iyi üzüm bağlarından elde edilen üzümlerle üretilen premium bir beyaz şaraptır. Geleneksel üretim teknikleri ve modern teknolojinin birleşimiyle ortaya çıkmıştır.',
+      fullDescription: 'Kindzmarauli, Gürcistan\'ın en iyi üzüm bağlarından elde edilen üzümlerle üretilen premium bir beyaz şaraptır. Geleneksel üretim teknikleri ve modern teknolojinin birleşimiyle ortaya çıkmıştır.',
       features: ['Geleneksel üretim', 'Premium kalite', 'Gürcü üzümleri', 'Özel fermantasyon']
     },
     'rkatsiteli': {
