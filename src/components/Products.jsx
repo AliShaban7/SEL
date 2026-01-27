@@ -37,15 +37,15 @@ const Products = () => {
     },
     {
       id: 3,
-      name: 'Mildiani Alaznis Veli',
+      name: 'Mildiani Kindzmarauli',
       brand: 'Mildiani',
-      productName: 'Alaznis Veli',
+      productName: 'Kindzmarauli',
       category: 'wine',
-      image: '/gallery/ALAZNS-VEL.png',
+      image: '/gallery/kindzmarauilo.png',
       description: 'Premium Gürcü şarabı',
       alcohol: '12-13% vol',
       highlights: ['Geleneksel üretim', 'Premium kalite'],
-      slug: 'alaznis-veli'
+      slug: 'Kindzmarauli'
     },
     {
       id: 4,

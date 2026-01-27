@@ -15,12 +15,29 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Form submission logic would go here
-    console.log('Form submitted:', formData);
-    alert('Mesajınız gönderildi! En kısa sürede size dönüş yapacağız.');
-    setFormData({ name: '', email: '', message: '' });
+    
+    try {
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({
+          'form-name': 'contact',
+          ...formData
+        }).toString()
+      });
+      
+      if (response.ok) {
+        alert('Mesajınız gönderildi! En kısa sürede size dönüş yapacağız.');
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        alert('Bir hata oluştu. Lütfen tekrar deneyin.');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      alert('Bir hata oluştu. Lütfen tekrar deneyin.');
+    }
   };
 
   return (
@@ -28,7 +45,16 @@ const Contact = () => {
       <div className="contact-container">
         <h2 className="section-title">BİZİMLE İLETİŞİME GEÇİN</h2>
         <div className="contact-content">
-          <form className="contact-form" onSubmit={handleSubmit}>
+          <form 
+            className="contact-form" 
+            onSubmit={handleSubmit}
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+          >
+            <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="bot-field" />
             <h3 className="form-title">Mesaj Gönderin</h3>
             <p className="form-subtitle">Bizimle iletişime geçmek için formu doldurun</p>
             <div className="form-group">
@@ -106,7 +132,7 @@ const Contact = () => {
               </div>
               <div className="contact-details">
                 <h3>Adres</h3>
-                <p>Üniversite Mh. Civan Sk. No:1 Allure Tower Kat: 18 Ofis 256 Avcılar/İstanbul</p>
+                <a href="https://maps.google.com/?q=Üniversite+Mh.+Civan+Sk.+No:1+Allure+Tower+Avcılar+İstanbul" target="_blank" rel="noopener noreferrer">Üniversite Mh. Civan Sk. No:1 Allure Tower Kat: 18 Ofis 256 Avcılar/İstanbul</a>
               </div>
             </div>
           </div>
