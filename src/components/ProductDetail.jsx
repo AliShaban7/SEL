@@ -17,9 +17,9 @@ const ProductDetail = () => {
       image: '/gallery/Chisti-Rosi-Packed.jpg',
       description: 'Organik vodka',
       alcohol: '40% vol',
-      highlights: ['Kosher Parve', 'Manuel kontrol'],
+      highlights: ['Ödüllü', 'Manuel kontrol'],
       fullDescription: 'Chistie Rosi, Saranskiy Distillery tarafından üretilen premium organik vodkadır. Geleneksel üretim yöntemleri ve en kaliteli malzemelerle hazırlanan bu vodka, saf ve berrak tadıyla öne çıkar.',
-      features: ['Organik malzemeler', 'Geleneksel üretim', 'Kosher sertifikalı', 'Manuel kalite kontrolü']
+      features: ['Organik malzemeler', 'Geleneksel üretim', 'Ulusal sertifikalı', 'Manuel kalite kontrolü']
     },
     'balchug-xxi': {
       name: 'Saranskiy Distillery Balchug XXI',
